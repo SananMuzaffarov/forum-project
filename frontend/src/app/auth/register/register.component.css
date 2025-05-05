@@ -1,10 +1,8 @@
-/* Base styles */
 .register-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  /*background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);*/
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 20px;
 }
@@ -27,7 +25,6 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Header styles */
 .register-header {
   text-align: center;
   margin-bottom: 40px;
@@ -45,7 +42,6 @@
   font-size: 14px;
 }
 
-/* Form styles */
 .register-form {
   display: flex;
   flex-direction: column;
@@ -101,7 +97,6 @@
   width: 100%;
 }
 
-/* Form options */
 .form-options {
   margin: 15px 0;
   font-size: 13px;
@@ -132,7 +127,6 @@
   text-decoration: underline;
 }
 
-/* Button styles */
 .register-button {
   display: flex;
   align-items: center;
@@ -201,7 +195,6 @@
   opacity: 1;
 }
 
-/* Login link */
 .login-link {
   text-align: center;
   font-size: 14px;
@@ -220,7 +213,6 @@
   text-decoration: underline;
 }
 
-/* Password strength indicator */
 .password-strength {
   margin-top: 5px;
   height: 4px;

@@ -19,13 +19,12 @@ export class LoginComponent {
 
   constructor(
     private authService: AuthService,
-    private router: Router // Inject Router
+    private router: Router 
   ) {}
 
   login() {
     this.authService.login(this.username, this.password).subscribe(
       data => {
-        // Navigate to topics after successful login
         this.router.navigate(['/topics']);
       },
       error => {

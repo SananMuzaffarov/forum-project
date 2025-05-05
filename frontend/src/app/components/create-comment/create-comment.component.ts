@@ -14,7 +14,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 })
 
 export class CreateCommentComponent implements OnInit {
-  topicId!: string; // Use non-null assertion operator
+  topicId!: string; 
   content: string = '';
 
   constructor(
@@ -36,7 +36,6 @@ export class CreateCommentComponent implements OnInit {
     const comment = { content: this.content, author, topicId: this.topicId };
     this.commentService.createComment(this.topicId, comment).subscribe(
       data => {
-        // Handle successful comment creation, e.g., clear the form
         this.content = '';
       },
       error => {

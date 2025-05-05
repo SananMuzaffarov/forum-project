@@ -1,4 +1,3 @@
-/* Comment Form Container */
 .create-comment-container {
   padding: 1.5rem;
   max-width: 800px;
@@ -21,7 +20,6 @@
   box-shadow: 0 6px 25px rgba(0, 123, 255, 0.15);
 }
 
-/* Comment Header */
 .comment-header {
   margin-bottom: 1.5rem;
 }
@@ -39,7 +37,6 @@
   margin: 0;
 }
 
-/* Form Elements */
 .comment-form {
   display: flex;
   flex-direction: column;
@@ -97,7 +94,6 @@
   width: 100%;
 }
 
-/* Button Styles */
 .submit-button {
   display: flex;
   align-items: center;
@@ -138,7 +134,6 @@
   transform: translateX(3px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .create-comment-container {
     padding: 1rem;

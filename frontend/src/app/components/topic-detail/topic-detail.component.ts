@@ -1,11 +1,10 @@
 import { TopicService } from '../../services/topic.service';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-//import { CommentService } from '../../services/comment.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth.service';
-import { trigger, transition, style, animate } from '@angular/animations'; // Import animation functions
+import { trigger, transition, style, animate } from '@angular/animations'; 
 
 @Component({
   selector: 'app-topic-detail',
@@ -27,14 +26,14 @@ import { trigger, transition, style, animate } from '@angular/animations'; // Im
 })
 
 export class TopicDetailComponent implements OnInit {
-  topic: any = null; // Initialize topic as null
-  topicId!: string; // Use non-null assertion operator
+  topic: any = null; 
+  topicId!: string; 
 
   constructor(
     public authService: AuthService,
     private route: ActivatedRoute,
     public topicService: TopicService,
-    private router: Router // Inject Router
+    private router: Router 
   ) { }
 
   ngOnInit(): void {
@@ -85,7 +84,6 @@ export class TopicDetailComponent implements OnInit {
 
   
   isAuthor(author: any): boolean {
-    console.log(author);
     const currentUser = this.authService.currentUserValue;
 
     const boobl = currentUser?.userId === author?._id

@@ -20,7 +20,7 @@ export class NavigationComponent {
 
   isModerator(): boolean {
     const currentUser = this.authService.currentUserValue;
-    console.log('Current user:', currentUser); // Debugging line
+    console.log('Current user:', currentUser);
     return currentUser && currentUser.role === 'moderator';
   }
 }

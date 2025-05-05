@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { trigger, transition, style, animate } from '@angular/animations'; // Import animation functions
+import { trigger, transition, style, animate } from '@angular/animations'; 
 
 
 @Component({

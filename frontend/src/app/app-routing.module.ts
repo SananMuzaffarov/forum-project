@@ -10,7 +10,6 @@ import { CommentListComponent } from './components/comment-list/comment-list.com
 import { CreateCommentComponent } from './components/create-comment/create-comment.component';
 import { EditCommentComponent } from './components/edit-comment/edit-comment.component';
 import { AuthGuard } from './guards/auth.guard'; 
-//import { ModeratorGuard } from './guards/moderator.guard'; 
 import { UserListComponent } from './components/user-list/user-list.component';
 
 

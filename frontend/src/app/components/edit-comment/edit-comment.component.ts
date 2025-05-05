@@ -1,6 +1,5 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommentService } from '../../services/comment.service';
-import { TopicService } from '../../services/topic.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -14,7 +13,7 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./edit-comment.component.css']
 })
 export class EditCommentComponent implements OnInit {
-  commentId!: string; // Use non-null assertion operator
+  commentId!: string; 
   content: string = '';
 
   constructor(
@@ -28,10 +27,10 @@ export class EditCommentComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.commentId = params['id'];
       this.commentService.getComment(this.commentId).subscribe(
-        (data: any) => { // Specify type for data
+        (data: any) => { 
           this.content = data.content;
         },
-        (error: any) => { // Specify type for error
+        (error: any) => { 
           console.error('Error fetching comment', error);
         }
       );
@@ -42,7 +41,6 @@ export class EditCommentComponent implements OnInit {
     const comment = { content: this.content, author: this.authService.currentUserValue.id };
     this.commentService.updateComment(this.commentId, comment).subscribe(
       (data: any) => {
-        // Handle successful comment update, e.g., navigate back to topic detail
         this.router.navigate(['/topics', data.topic]);
       },
       (error: any) => {

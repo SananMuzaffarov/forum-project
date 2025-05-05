@@ -1,4 +1,3 @@
-/* Comment List Container */
 .comment-list-container {
   max-width: 800px;
   margin: 2rem auto;
@@ -17,7 +16,6 @@
   box-shadow: 0 6px 25px rgba(0, 123, 255, 0.15);
 }
 
-/* Comments Header */
 .comments-header {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
@@ -37,7 +35,6 @@
   margin: 0;
 }
 
-/* Comment Card */
 .comment-card {
   background: rgba(51, 51, 51, 0.6);
   border-radius: 8px;
@@ -58,7 +55,6 @@
   margin-bottom: 0;
 }
 
-/* Comment Content */
 .comment-content {
   margin-bottom: 1rem;
   line-height: 1.6;
@@ -69,7 +65,6 @@
   margin: 0;
 }
 
-/* Comment Meta */
 .comment-meta {
   display: flex;
   justify-content: space-between;
@@ -91,7 +86,6 @@
   opacity: 0.7;
 }
 
-/* Animation */
 .comment-card {
   animation: fadeInUp 0.5s ease-out forwards;
   opacity: 0;
@@ -112,9 +106,7 @@
 .comment-card:nth-child(2) { animation-delay: 0.2s; }
 .comment-card:nth-child(3) { animation-delay: 0.3s; }
 .comment-card:nth-child(4) { animation-delay: 0.4s; }
-/* Add more as needed */
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .comment-list-container {
     padding: 1.5rem;

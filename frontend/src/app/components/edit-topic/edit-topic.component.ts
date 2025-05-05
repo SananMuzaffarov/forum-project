@@ -1,6 +1,5 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { TopicService } from '../../services/topic.service';
-import { CommentService } from '../../services/comment.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
