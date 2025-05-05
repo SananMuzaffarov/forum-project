@@ -1,0 +1,129 @@
+/* Comment List Container */
+.comment-list-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(31, 31, 31, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(160, 206, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.comment-list-container:hover {
+  border-color: rgba(160, 206, 255, 0.3);
+  box-shadow: 0 6px 25px rgba(0, 123, 255, 0.15);
+}
+
+/* Comments Header */
+.comments-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(160, 206, 255, 0.2);
+}
+
+.comments-title {
+  font-size: 1.5rem;
+  color: #a0ceff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.comments-subtitle {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Comment Card */
+.comment-card {
+  background: rgba(51, 51, 51, 0.6);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(160, 206, 255, 0.05);
+}
+
+.comment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-color: rgba(160, 206, 255, 0.2);
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.comment-card:last-child {
+  margin-bottom: 0;
+}
+
+/* Comment Content */
+.comment-content {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.comment-content p {
+  margin: 0;
+}
+
+/* Comment Meta */
+.comment-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #b0b0b0;
+}
+
+.comment-author, .comment-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-icon, .clock-icon {
+  width: 16px;
+  height: 16px;
+  fill: #a0ceff;
+  opacity: 0.7;
+}
+
+/* Animation */
+.comment-card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comment-card:nth-child(1) { animation-delay: 0.1s; }
+.comment-card:nth-child(2) { animation-delay: 0.2s; }
+.comment-card:nth-child(3) { animation-delay: 0.3s; }
+.comment-card:nth-child(4) { animation-delay: 0.4s; }
+/* Add more as needed */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .comment-list-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .comment-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

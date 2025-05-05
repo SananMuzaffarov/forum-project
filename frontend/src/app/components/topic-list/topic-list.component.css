@@ -1,0 +1,156 @@
+/* Topic List Container */
+.topic-list-container {
+  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+/* Header Styles */
+.topic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(160, 206, 255, 0.2);
+  padding-bottom: 1.5rem;
+}
+
+.topic-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #a0ceff, #007bff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* Add Topic Button */
+.add-topic-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #007bff, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.add-topic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.add-topic-btn:active {
+  transform: translateY(0);
+}
+
+.plus-icon {
+  width: 20px;
+  height: 20px;
+  fill: white;
+}
+
+/* Topics Grid */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Topic Card */
+.topic-card {
+  background: rgba(31, 31, 31, 0.7);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(160, 206, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15);
+  border-color: rgba(160, 206, 255, 0.3);
+}
+
+.topic-link {
+  display: block;
+  padding: 2rem;
+  text-decoration: none !important;
+  color: inherit;
+  height: 100%;
+}
+
+.topic-link h2 {
+  color: #a0ceff;
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.topic-card:hover .topic-link h2 {
+  color: #007bff;
+}
+
+/* Topic Meta */
+.topic-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #b0b0b0;
+}
+
+.topic-author, .topic-date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.user-icon, .calendar-icon {
+  width: 16px;
+  height: 16px;
+  fill: #a0ceff;
+  opacity: 0.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topic-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .topic-list-container {
+    padding: 2rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.topic-card {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.topic-card:nth-child(1) { animation-delay: 0.1s; }
+.topic-card:nth-child(2) { animation-delay: 0.2s; }
+.topic-card:nth-child(3) { animation-delay: 0.3s; }
+.topic-card:nth-child(4) { animation-delay: 0.4s; }

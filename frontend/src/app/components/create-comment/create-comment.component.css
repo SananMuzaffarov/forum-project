@@ -1,0 +1,154 @@
+/* Comment Form Container */
+.create-comment-container {
+  padding: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.comment-form-card {
+  background: rgba(31, 31, 31, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(160, 206, 255, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.comment-form-card:hover {
+  border-color: rgba(160, 206, 255, 0.3);
+  box-shadow: 0 6px 25px rgba(0, 123, 255, 0.15);
+}
+
+/* Comment Header */
+.comment-header {
+  margin-bottom: 1.5rem;
+}
+
+.comment-title {
+  font-size: 1.5rem;
+  color: #a0ceff;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.comment-subtitle {
+  color: #b0b0b0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Form Elements */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1rem;
+  color: #e0e0e0;
+  border: none;
+  border-bottom: 1px solid #444;
+  outline: none;
+  background: transparent;
+  resize: none;
+  transition: all 0.3s;
+  min-height: 120px;
+}
+
+.form-group label {
+  position: absolute;
+  top: 12px;
+  left: 0;
+  color: #718096;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #a0ceff;
+  font-size: 0.8rem;
+}
+
+.underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #a0ceff;
+  transition: all 0.3s;
+}
+
+.form-group textarea:focus ~ .underline {
+  width: 100%;
+}
+
+/* Button Styles */
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #007bff, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 123, 255, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.button-icon {
+  width: 18px;
+  height: 18px;
+  fill: white;
+  transition: transform 0.3s;
+}
+
+.submit-button:hover .button-icon {
+  transform: translateX(3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-comment-container {
+    padding: 1rem;
+  }
+  
+  .comment-form-card {
+    padding: 1.25rem;
+  }
+  
+  .submit-button {
+    max-width: 100%;
+  }
+}

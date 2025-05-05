@@ -1,0 +1,8 @@
+.edit-comment-container {
+    margin: 20px;
+  }
+  .edit-comment-container textarea {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+

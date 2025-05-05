@@ -1,0 +1,8 @@
+<div class="user-list-container">
+  <h3>Users</h3>
+  <div *ngFor="let user of users">
+    <p>{{ user.username }}
+      <button (click)="deleteUser(user._id)">Delete</button>
+    </p>
+  </div>
+</div>

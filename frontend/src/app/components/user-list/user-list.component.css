@@ -1,0 +1,23 @@
+.user-list-container {
+    padding: 10rem;
+  }
+  
+  .user-list-container p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  button {
+    margin-left: 1rem;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff1a1a;
+  }
+  

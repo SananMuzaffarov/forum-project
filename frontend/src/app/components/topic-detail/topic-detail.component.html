@@ -1,0 +1,78 @@
+<div class="topic-detail-container" *ngIf="topic" @fadeIn>
+  <div class="topic-content">
+    <div class="topic-meta">
+      <h1 class="topic-title">{{ topic?.title }}</h1>
+      <div class="author-info">
+        <svg viewBox="0 0 24 24" class="user-icon">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+        <span class="author-name">{{ topic?.author.username || 'Anonymous' }}</span>
+        <span class="divider">•</span>
+        <svg viewBox="0 0 24 24" class="calendar-icon">
+          <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+        </svg>
+        <span class="post-date">{{ topic?.createdAt | date:'mediumDate' }}</span>
+      </div>
+    </div>
+    <div class="content-text">
+      <p>{{ topic?.content }}</p>
+    </div>
+  </div>
+
+  <div class="topic-header">
+    <button class="back-button" (click)="goBack()">
+      <svg viewBox="0 0 24 24" class="back-icon">
+        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+      </svg>
+      Back to Topics
+    </button>
+    
+    <div class="topic-actions">
+      <button *ngIf="isModerator()" class="moderator-button" [routerLink]="['/users']">
+        <svg viewBox="0 0 24 24" class="action-icon">
+          <path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4z"/>
+        </svg>
+        View Users
+      </button>
+      
+      <button *ngIf="isAuthor(topic.author)" class="edit-button" (click)="editTopic()">
+        <svg viewBox="0 0 24 24" class="action-icon">
+          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+        </svg>
+        Edit Topic
+      </button>
+      
+      <button *ngIf="isModerator()" class="delete-button" (click)="deleteTopic(topic._id)">
+        <svg viewBox="0 0 24 24" class="action-icon">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+        </svg>
+        Delete
+      </button>
+    </div>
+  </div>
+
+  <div class="comment-actions">
+    <button class="view-comments-button" [routerLink]="['comments']">
+      <svg viewBox="0 0 24 24" class="action-icon">
+        <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+      </svg>
+      View Comments
+    </button>
+    
+    <button class="add-comment-button" [routerLink]="['create-comment']" (click)="addComment()">
+      <svg viewBox="0 0 24 24" class="action-icon">
+        <path d="M10 9V5l-7 7 7 7v-4.1c5 0 8.5 1.6 11 5.1-1-5-4-10-11-11z"/>
+      </svg>
+      Add Comment
+    </button>
+  </div>
+
+  <router-outlet></router-outlet>  
+  <!-- <button *ngIf="isModerator()" class="delete-topic-button" (click)="deleteTopic(topic._id)">Delete</button> -->
+</div>
+
+
+<div *ngIf="!topic" class="loading-container">
+  <div class="loading-spinner"></div>
+  <p>Loading topic...</p>
+</div>

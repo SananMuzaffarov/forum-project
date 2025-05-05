@@ -1,0 +1,31 @@
+<div class="create-topic-container">
+  <div class="form-card">
+    <div class="form-header">
+      <h2 class="form-title">Create New Topic</h2>
+      <p class="form-subtitle">Start a new discussion with the community</p>
+    </div>
+    
+    <form (submit)="createTopic()" class="topic-form">
+      <div class="form-group">
+        <input type="text" id="title" [(ngModel)]="title" name="title" required>
+        <label for="title">Topic Title</label>
+        <div class="underline"></div>
+      </div>
+      
+      <div class="form-group">
+        <textarea id="content" [(ngModel)]="content" name="content" rows="6" required></textarea>
+        <label for="content">Discussion Content</label>
+        <div class="underline"></div>
+      </div>
+      
+      <div class="form-actions">
+        <button type="submit" class="create-button">
+          <svg viewBox="0 0 24 24" class="button-icon">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+          </svg>
+          <span>Create Topic</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

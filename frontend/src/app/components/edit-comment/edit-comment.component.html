@@ -1,0 +1,10 @@
+<div class="edit-comment-container">
+    <h3>Edit Comment</h3>
+    <form (submit)="updateComment()">
+      <div>
+        <textarea [(ngModel)]="content" name="content" required></textarea>
+      </div>
+      <button type="submit">Update</button>
+    </form>
+  </div>
+  

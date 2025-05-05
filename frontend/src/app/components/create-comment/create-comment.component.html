@@ -1,0 +1,25 @@
+<div class="create-comment-container">
+  <div class="comment-form-card">
+    <div class="comment-header">
+      <h3 class="comment-title">Add Your Comment</h3>
+      <p class="comment-subtitle">Share your thoughts with the community</p>
+    </div>
+    
+    <form (submit)="createComment()" class="comment-form">
+      <div class="form-group">
+        <textarea id="content" [(ngModel)]="content" name="content" rows="4" required></textarea>
+        <label for="content">Your Comment</label>
+        <div class="underline"></div>
+      </div>
+      
+      <div class="form-actions">
+        <button type="submit" class="submit-button">
+          <svg viewBox="0 0 24 24" class="button-icon">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+          <span>Post Comment</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<nav class="navbar">
+    <a class="nav-link" [routerLink]="['/topics']">Topics</a>
+    <a *ngIf="isModerator()" class="nav-link" [routerLink]="['/users']">View Users</a>
+    <a class="nav-link" (click)="logout()">Logout</a>
+</nav>
