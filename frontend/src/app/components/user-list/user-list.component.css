@@ -1,23 +1,100 @@
 .user-list-container {
-    padding: 10rem;
-  }
-  
-  .user-list-container p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  button {
-    margin-left: 1rem;
-    background-color: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 0.5rem;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ff1a1a;
-  }
-  
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(31, 31, 31, 0.9);;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.user-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.user-list-title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.total-users {
+  background: #f8f9fa;
+  color: #6c757d;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.user-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background: #4e73df;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.username {
+  font-weight: 500;
+  color: #fff;
+}
+
+.delete-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.delete-btn svg {
+  transition: fill 0.2s ease;
+}
+
+.delete-btn:hover svg {
+  fill: white;
+}
