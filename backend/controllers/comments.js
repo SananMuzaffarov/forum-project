@@ -14,8 +14,6 @@ exports.getComments = async (req, res) => {
 exports.createComment = async (req, res) => {
     const { content, author: authorToken, topicId } = req.body;
     const author = jwtDecode(authorToken).id;
-
-
     try {
         const comment = new Comment({ topicId, content, author });
         await comment.save();
